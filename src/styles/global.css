@@ -1,0 +1,357 @@
+:root {
+    --backgroundfadeLeft: #1f3e47;
+    --backgroundfadeRight: #090515;
+    --lightred: #eb5569;
+    --lightblue: #32789f;
+    --normaltext: #bcbcbc;
+    --glass: #d9d9d9;
+}
+body {
+    scroll-behavior: smooth;
+    background: rgb(31, 62, 71);
+    background: linear-gradient(90deg, rgba(31, 62, 71, 1) 0%, rgba(9, 5, 21, 1) 100%);
+    overflow-x: hidden;
+}
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+#root {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: auto;
+}
+.main {
+    width: 80%;
+    max-width: 1200px;
+    height: auto;
+    min-height: 100vh;
+}
+.main2 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: scroll;
+    overflow-x: hidden;
+    height: calc(100vh - 70px);
+    margin-top: 70px;
+}
+.main3 {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    max-width: 1400px;
+}
+
+.map {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.mapContainner {
+    flex: 1;
+    border: none;
+    margin-top: -10px;
+}
+hr {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 100%;
+    border-color: #d8d8d825;
+}
+.main3 hr {
+    width: 80%;
+    margin-top: 0px;
+    margin-bottom: 100px;
+}
+.scrollToTop {
+    background-color: var(--lightred);
+    padding: 10px;
+    border-radius: 50%;
+    box-shadow: rgba(50, 50, 50, 0.744) 0px 0px 20px;
+    color: white;
+    display: flex;
+    position: fixed;
+    right: 25px;
+    bottom: 0px;
+    cursor: pointer;
+    transition: 0.3s;
+    visibility: hidden;
+    z-index: 100;
+}
+.showScrollToTop {
+    bottom: 20px;
+    visibility: visible;
+    transition: 0.3s;
+}
+.scrollToTop:hover {
+    scale: 1.8;
+    padding-top: 0px;
+    transition: 0.3s;
+}
+.textjustify {
+    text-align: justify;
+}
+.textcenter {
+    text-align: center;
+}
+.rowflex {
+    display: flex;
+    flex-direction: row;
+    transition: 0.5s;
+}
+.columnflex {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.redtext {
+    color: var(--lightred);
+}
+.whitetext {
+    color: white;
+}
+.bluetext {
+    color: #ebebeb;
+}
+.normaltext {
+    color: var(--normaltext);
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.creeperLoading {
+    height: 200px;
+    width: 200px;
+    justify-self: center;
+}
+.loadingContainner {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.errorContainner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    /* height: 100vh; */
+    width: 100%;
+}
+@media screen and (max-width: 800px) {
+    .main {
+        width: 90%;
+    }
+    .main2 {
+        width: 95%;
+    }
+}
+.ggallery {
+    background-color: transparent;
+    font-size: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 90%;
+    min-width: 90%;
+}
+
+.SeasonTitleContainner {
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.growContainner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+.g_row {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: fit-content;
+    gap: 10px;
+}
+.rowImage {
+    min-height: 250px;
+    max-height: 250px;
+    object-fit: cover;
+    flex: 1;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.adminPage {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+/* //////////////////// events //////////////////  */
+.events-box {
+    -webkit-user-drag: none;
+    user-select: none;
+    height: 500px;
+    display: flex;
+    width: 80%;
+    max-height: 70%;
+    position: fixed;
+    top: 100px;
+    background-color: black;
+    z-index: 1000;
+    color: rgb(174, 18, 153);
+    border-radius: 20px;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.713) 10px 10px 150px;
+    background-size: cover;
+    background-image: url('https://cdna.artstation.com/p/assets/images/images/049/403/830/large/unravy-the-end-realm-01.jpg?1652402701');
+}
+.event-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.event-title {
+    flex: 1;
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+.event-close {
+    font-size: 50px;
+    color: white;
+    margin-right: 10px;
+    transition: 0.2s;
+}
+.event-close:hover {
+    color: #ebc855;
+    transform: rotateZ(180deg);
+    transform-origin: center;
+    transition: 0.2s;
+}
+.event-body {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.event-img-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.event-img {
+    height: 300px;
+    -webkit-user-drag: none;
+}
+.countdown-containner {
+    -webkit-user-drag: none;
+    position: relative;
+    flex: 1;
+    margin: 20px;
+    border: solid rgb(255, 255, 255) 2px;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    border-radius: 20px;
+    align-items: center;
+    background-color: black;
+}
+.countdown {
+    -webkit-user-drag: none;
+    font-size: 70px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Lilita One', cursive;
+}
+.countdown-header {
+    position: absolute;
+    top: -30px;
+    height: 40px;
+    background-color: rgb(26, 134, 26);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 800px) {
+    .events-box {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 95%;
+        max-width: 95%;
+        height: fit-content;
+        max-height: 80%;
+    }
+    .event-title {
+        font-size: 30px;
+    }
+    .event-body {
+        flex-direction: column;
+    }
+    .event-img {
+        height: 100px;
+        display: none;
+    }
+    .countdown {
+        font-size: 40px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .countdown-containner {
+        max-height: 200px;
+        height: 200px;
+        margin-top: 50px;
+    }
+}
