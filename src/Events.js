@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Countdown from 'react-countdown';
+import Image from 'next/image';
 
 const Events = () => {
     const [open, setOpen] = useState(true);
@@ -16,7 +17,7 @@ const Events = () => {
                     </div>
                     <div className="event-body">
                         <div className="event-img-box">
-                            <img src="./assets/images/endframe.png" alt="Event Image" className="event-img"></img>
+                            <Image src="/assets/images/endframe.png" alt="Event Image" className="event-img" />
                         </div>
                         <div className="countdown-container">
                             <Countdown className="countdown" date={date} key="countdown"></Countdown>
